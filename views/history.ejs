@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><%- include('partials/head') %></head>
+  <body class="min-h-screen flex flex-col">
+    <header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-gray-800">
+      <nav aria-label="Primary" class="container mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="/" class="text-green-400 font-semibold"><%= site.title %></a>
+        <ul class="flex items-center gap-3 text-sm">
+          <li><a class="px-3 py-2 rounded hover:bg-gray-800" href="/">Home</a></li>
+          <li><a aria-current="page" class="px-3 py-2 rounded bg-gray-800" href="/history">History</a></li>
+          <li><a class="px-3 py-2 rounded hover:bg-gray-800" href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" tabindex="-1" class="flex-1">
+      <section class="container mx-auto px-6 py-12">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-500 mb-3">
+          Taiwan’s Internet History
+        </h1>
+        <p class="max-w-3xl text-gray-300">
+          A milestone-driven tour across four stages: academic foundations & dial-up, broadband expansion,
+          mobile & social era, and the 5G+ digital society.
+        </p>
+      </section>
+
+      <section class="container mx-auto px-6 pb-14 grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <!-- Quick Nav -->
+        <aside class="lg:col-span-1" aria-label="Section navigation">
+          <div class="sticky top-24 space-y-3">
+            <% stages.forEach(function(s){ %>
+              <a href="#<%= s.id %>" class="block bg-gray-900/70 border border-gray-800 hover:border-green-600 rounded-xl px-4 py-3">
+                <div class="text-sm text-gray-400"><%= s.period %></div>
+                <div class="font-semibold text-green-300"><%= s.title.split(' — ')[0] %></div>
+              </a>
+            <% }) %>
+          </div>
+        </aside>
+
+        <!-- Stages -->
+        <section class="lg:col-span-3 space-y-10">
+          <% stages.forEach(function(s){ %>
+            <article id="<%= s.id %>" class="bg-gray-900 p-6 md:p-8 rounded-3xl border border-gray-800">
+              <header>
+                <h2 class="text-2xl md:text-3xl font-bold text-green-300"><%= s.title %></h2>
+                <p class="text-gray-300 mt-2"><%= s.summary %></p>
+              </header>
+
+              <div class="grid md:grid-cols-2 gap-6 mt-6">
+                <section aria-labelledby="<%= s.id %>-tech" class="bg-black/40 rounded-2xl p-5 border border-gray-800">
+                  <h3 id="<%= s.id %>-tech" class="font-semibold text-lime-300 mb-3">Technical</h3>
+                  <ul class="list-disc list-inside text-gray-300 space-y-2 prose">
+                    <% s.technical.forEach(function(item){ %><li><%= item %></li><% }) %>
+                  </ul>
+                </section>
+
+                <section aria-labelledby="<%= s.id %>-soc" class="bg-black/40 rounded-2xl p-5 border border-gray-800">
+                  <h3 id="<%= s.id %>-soc" class="font-semibold text-cyan-300 mb-3">Societal</h3>
+                  <ul class="list-disc list-inside text-gray-300 space-y-2 prose">
+                    <% s.societal.forEach(function(item){ %><li><%= item %></li><% }) %>
+                  </ul>
+                </section>
+              </div>
+
+              <div class="mt-6 border border-gray-800 rounded-2xl">
+                <button type="button"
+                        class="w-full text-left px-5 py-4 font-semibold hover:bg-gray-800/60 rounded-2xl"
+                        aria-expanded="false"
+                        aria-controls="<%= s.id %>-more"
+                        onclick="
+                          const c = document.getElementById('<%= s.id %>-more');
+                          const expanded = this.getAttribute('aria-expanded') === 'true';
+                          this.setAttribute('aria-expanded', String(!expanded));
+                          if (!expanded) { c.classList.remove('hidden'); } else { c.classList.add('hidden'); }
+                        ">
+                  Deeper Context
+                </button>
+                <div id="<%= s.id %>-more" class="hidden px-5 pb-5">
+                  <p class="text-gray-300"><%= s.context %></p>
+                </div>
+              </div>
+            </article>
+          <% }) %>
+
+          <!-- Milestones -->
+          <article id="milestones" class="bg-gray-900 p-6 md:p-8 rounded-3xl border border-gray-800">
+            <h2 class="text-2xl md:text-3xl font-bold text-green-300 mb-4">Key Milestones</h2>
+            <div class="overflow-x-auto">
+              <table class="min-w-full text-left text-sm md:text-base">
+                <caption class="sr-only">Timeline of Taiwan internet milestones</caption>
+                <thead class="bg-gray-800/60 text-gray-200">
+                  <tr>
+                    <th class="px-4 py-3">Date/Period</th>
+                    <th class="px-4 py-3">Milestone</th>
+                    <th class="px-4 py-3">Impact</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-800">
+                  <% milestones.forEach(function(m){ %>
+                    <tr class="hover:bg-gray-800/40">
+                      <td class="px-4 py-3"><%= m[0] %></td>
+                      <td class="px-4 py-3"><%= m[1] %></td>
+                      <td class="px-4 py-3"><%= m[2] %></td>
+                    </tr>
+                  <% }) %>
+                </tbody>
+              </table>
+            </div>
+            <div class="text-right mt-4">
+              <a href="#main" class="text-green-400 hover:text-green-300 text-sm">Back to top ↑</a>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <footer class="border-t border-gray-800 text-center p-4 text-sm text-gray-500">
+      &copy; 2025 Internet Museum. All rights reserved.
+    </footer>
+  </body>
+</html>

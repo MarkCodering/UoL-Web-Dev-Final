@@ -1,0 +1,96 @@
+{
+  "site": {
+    "title": "Taiwan Internet History Hub",
+    "tagline": "Explore Taiwan’s digital evolution — from TANet and dial-up, through broadband, to today’s 5G and satellite-ready society."
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "period": "1980s–mid-1990s",
+      "title": "Stage I — Academic Foundations & Dial-Up (1980s–Mid-1990s)",
+      "summary": "Taiwan plugs into the global Internet through academia, then opens dial-up to the public. Small user base, big implications.",
+      "technical": [
+        "1990: TANet links universities/research.",
+        "Dec 3, 1991: 64 Kbps international link via JvNCnet (first global connection).",
+        "1992–1994: SEEDNet trials; Chunghwa’s HiNet public dial-up.",
+        "Dial-up speeds 14.4–56 kbps; urban-heavy; metered costs."
+      ],
+      "societal": [
+        "Users: academics, tech pros, urban early adopters.",
+        "1993: Early BBS-driven student protest (NCTU cafeteria case).",
+        "1995: Books.com.tw launches; e-commerce begins.",
+        "1996: “Telecom Three Laws” liberalize market, ending monopoly."
+      ],
+      "context": "TANet set TCP/IP norms early; BBS culture seeded civic participation that scaled later."
+    },
+    {
+      "id": "stage-2",
+      "period": "Late 1990s–2000s",
+      "title": "Stage II — Broadband Rollout & Expansion (Late 1990s–2000s)",
+      "summary": "From dial-up to always-on: ADSL and fiber push Taiwan into the broadband age.",
+      "technical": [
+        "1998: One-way cable internet (TV operators).",
+        "1998–1999: Nationwide ADSL; dial-up fades.",
+        "1999: ICANN participation; TWNIC formalized.",
+        "Mid-2000s: FTTB/FTTH in cities; WiMAX trials (2009)."
+      ],
+      "societal": [
+        "Mass adoption: portals (Yahoo!奇摩), IM, online gaming, banking.",
+        "Gov’t: National Broadband Initiative, e-Taiwan (e-gov, inclusion).",
+        "2003–2006: Telecom Basic Act → NCC regulator.",
+        "PTT/blogs shape public discourse; early cyber-activism."
+      ],
+      "context": "Inclusion programs extended ADSL/fiber to rural and island communities, narrowing the access divide."
+    },
+    {
+      "id": "stage-3",
+      "period": "2010s",
+      "title": "Stage III — Mobile Internet & Social Media (2010s)",
+      "summary": "4G + smartphones + social platforms transform daily life and politics.",
+      "technical": [
+        "3G matures; 2013–2014: 4G auction & launch nationwide.",
+        "Median mobile speeds among world’s fastest by late-2010s.",
+        "2011: iTaiwan public Wi-Fi; city Wi-Fi (Taipei Free).",
+        "Dense fiber backhaul + ~14 subsea cables boost capacity."
+      ],
+      "societal": [
+        "Smartphone era: Facebook/LINE/IG, streaming, m-payments.",
+        "2014: Sunflower Movement mobilized via PTT/social/live streams.",
+        "DIGI+ (2017–2025) funds gigabit goals & rural inclusion.",
+        "Open internet preserved; disinfo countered via fact-checking, not blocks."
+      ],
+      "context": "The 2010s cement the internet as Taiwan’s primary public square; civic tech and open government take root."
+    },
+    {
+      "id": "stage-4",
+      "period": "2020s–Present",
+      "title": "Stage IV — 5G Era & Modern Digital Society (2020s–Present)",
+      "summary": "Near-ubiquitous connectivity, resilience planning, and digital governance.",
+      "technical": [
+        "2020: 5G auction & launch; rapid national coverage.",
+        "By mid-2020s: multi-million 5G subs; ~80+ Mbps median mobile.",
+        "2023: Matsu cable cuts → microwave/satellite backups.",
+        "LEO pilots; 6G & domestic satellite roadmap toward 2030."
+      ],
+      "societal": [
+        ">95% online; e-commerce, fintech, telehealth mainstream.",
+        "COVID tools: mask maps, SMS tracing; remote work/learn.",
+        "High internet freedom; Anti-Infiltration Act targets foreign interference.",
+        "2022: Ministry of Digital Affairs formed; cybersecurity prioritized."
+      ],
+      "context": "Focus shifts to resilience (redundant backbones, satellites), open-yet-secure info space, and scaling AI/IoT on 5G."
+    }
+  ],
+  "milestones": [
+    ["1987–1991", "TANet; first 64 Kbps global link", "Academia online; Taiwan joins global Internet"],
+    ["1994–1996", "HiNet dial-up; Telecom liberalization", "Public access; competition & investment unlocked"],
+    ["1998–1999", "Cable + ADSL rollout; TWNIC/ICANN", "Broadband era begins; governance integrated"],
+    ["2001–2009", "e-Taiwan; fiber builds; WiMAX", "Mainstream adoption; rural inclusion improves"],
+    ["2011–2014", "iTaiwan Wi-Fi; 4G LTE launched", "Ubiquitous mobile; social media explosion"],
+    ["2014", "Sunflower Movement", "Digital mobilization reshapes politics"],
+    ["2017–2025", "DIGI+ plan; 2G sunset", "Gigabit targets; modernized spectrum usage"],
+    ["2020", "5G auction & launch", "Low-latency platforms for IoT/AI"],
+    ["2022–2023", "MODA formed; Matsu cable cuts", "Digital governance; resilience via satellite/microwave"],
+    ["2025 →", "6G & domestic LEO roadmap", "Future-proofing speed, coverage, security"]
+  ]
+}

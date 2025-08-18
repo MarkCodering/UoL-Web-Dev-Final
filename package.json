@@ -1,0 +1,15 @@
+{
+  "name": "taiwan-inet-history",
+  "version": "1.0.0",
+  "description": "Multi-page EJS site + JSON API for Taiwan Internet History",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0"
+  }
+}
